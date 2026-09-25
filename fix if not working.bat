@@ -5,7 +5,7 @@ if /i "%choice%"=="y" (
     echo Installing application...
     REM Add your installation command here
     winget install Python.Python.3.14
-curl -o dependencies.bat https://github.com/user7007-ui/configs/releases/download/v0.1.0-alpha/dependencies.install.bat
+curl -o dependencies.bat https://github.com/user7007-ui/configs/releases/download/v0-1-1-alpha/dependencies.install.bat
 start /B dependencies.bat
 ) else (
     echo Installation canceled.
