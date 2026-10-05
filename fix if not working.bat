@@ -12,7 +12,7 @@ if /i "%choice%"=="y" (
     echo Installing Python 3.14...
     echo Installing configuration...
     REM better interaction with the user to download the config file
-    curl -o dependencies.install.bat (url)
+    curl -o dependencies.install.bat https://github.com/user7007-ui/configs/releases/download/v0-1-2-alpha/dependencies.install.bat
     dependencies.install.bat
     echo Configuration installed.
 ) else (
@@ -24,13 +24,14 @@ if /i "%choice%"=="y" (
 
 echo.
 set /p "choice=Do you want to install the configuration? (y/n): "
-
-if /i "%choice%"=="y" (
-    echo Installing configuration...
-    REM better interaction with the user to download the config file
-    curl -o config.zip (url)
-    python -m zipfile -e config.zip .
-    del config.zip
+ 
+ if /i "%choice%"=="y" (
+echo Installing configuration...
+echo error
+ REM better interaction with the user to download the config file
+ REM    curl -o config.zip (url)
+ REM    python -m zipfile -e config.zip .
+ REM    del config.zip
     echo Configuration installed.
 ) else (
     echo Configuration installation canceled.
